@@ -27,7 +27,7 @@ export default function Home() {
         else (
             setdata(JSON.parse(localStorage.getItem("data")))
         )
-    }, [])
+    }, [data])
 
 
     const [login, setlogin] = useState(true)
@@ -123,7 +123,7 @@ export default function Home() {
             setauth(true)
         }
 
-    }, [error, data])
+    }, [error])
 
     return (
         <>
