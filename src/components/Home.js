@@ -6,7 +6,7 @@ import Header from './Header'
 
 export default function Home() {
 
-    const [data , setdata] = useState([])
+    const [data , setdata] = useState()
 
     const fetchdata = async() => {
         let parameter = {
@@ -27,7 +27,7 @@ export default function Home() {
         else (
             setdata(JSON.parse(localStorage.getItem("data")))
         )
-    }, [data])
+    }, [])
 
 
     const [login, setlogin] = useState(true)
@@ -123,7 +123,8 @@ export default function Home() {
             setauth(true)
         }
 
-    }, [error])
+    }, [auth])
+
 
     return (
         <>
